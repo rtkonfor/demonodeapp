@@ -1,0 +1,24 @@
+{
+  "name": "candidate-task",
+  "version": "1.0.0",
+  "description": "the task is automate the nodejs application deployment in AWS environment using Cloudformation and Codebuild.\r    you may use ECS/EC2 Cluster, Codebuild, ECR, Cloudformation, ALB, EC2, Cloudwatch and other services.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hubsync/candidate-task.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hubsync/candidate-task/issues"
+  },
+  "homepage": "https://github.com/hubsync/candidate-task#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
