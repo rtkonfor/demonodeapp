@@ -10,8 +10,4 @@ phases:
       - echo Installing dependencies
       - npm install
 
-  build:
-    commands:
-      - echo Running tests
-      - npm test
       
