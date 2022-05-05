@@ -14,16 +14,4 @@ phases:
     commands:
       - echo Running tests
       - npm test
-      - echo Building and tagging Docker image
-      - aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 762218330168.dkr.ecr.us-east-1.amazonaws.com
-      - docker build -t demonodejs .
-      - docker tag demonodejs 762218330168.dkr.ecr.us-east-1.amazonaws.com:latest
-
-  post_build:
-    commands:
-      - echo Pushing to ECR
-      - docker push 762218330168.dkr.ecr.us-east-1.amazonaws.com/richard_nodejs
-      - printf '[{"name":"demonodejs","imageUri":"762218330168.dkr.ecr.us-east-1.amazonaws.com:latest/demonodejs:latest"}]' > imagedefinitions.json
-
-artifacts:
-  files:
+      
