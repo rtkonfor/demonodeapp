@@ -19,7 +19,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - docker build -t 762218330168.dkr.ecr.us-east-1.amazonaws.com/richard_nodejs:latest .
+      - docker build -t nodeapp .
       
       
 
