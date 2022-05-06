@@ -24,12 +24,10 @@ phases:
       
   post_build:
      commands:
-      - echo Build completed on `date`
-      - echo Pushing the Docker images...
+      - echo Pushing to ECR
       - docker push 762218330168.dkr.ecr.us-east-1.amazonaws.com/richard_nodejs:latest
-      - echo Writing image definitions file...
       - printf '[{"name":"demonodejs","imageUri":"%s"}]' 762218330168.dkr.ecr.us-east-1.amazonaws.com/richard_nodejs:latest > imagedefinitions.json
-      - cat imagedefinitions.json 
+ 
  
 
       
