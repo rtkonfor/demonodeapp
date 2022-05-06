@@ -22,7 +22,7 @@ phases:
       - docker build -t 762218330168.dkr.ecr.us-east-1.amazonaws.com/richard_nodejs:latest .
       - docker tag 762218330168.dkr.ecr.us-east-1.amazonaws.com/richard_nodejs:latest 762218330168.dkr.ecr.us-east-1.amazonaws.com/richard_nodejs:latest
       
-   post_build:
+  post_build:
      commands:
       - echo Build completed on `date`
       - echo Pushing the Docker images...
