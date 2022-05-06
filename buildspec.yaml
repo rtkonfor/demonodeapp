@@ -22,8 +22,8 @@ phases:
       - docker build -t 762218330168.dkr.ecr.us-east-1.amazonaws.com/richard_nodejs:latest .
       - docker tag 762218330168.dkr.ecr.us-east-1.amazonaws.com/richard_nodejs:latest 762218330168.dkr.ecr.us-east-1.amazonaws.com/richard_nodejs:latest
       
-   post_build:
-     commands:
+  post_build:
+    commands:
       - echo Pushing to ECR
       - docker push 762218330168.dkr.ecr.us-east-1.amazonaws.com/richard_nodejs:latest
       - printf '[{"name":"demonodejs","imageUri":"%s"}]' 762218330168.dkr.ecr.us-east-1.amazonaws.com/richard_nodejs:latest > imagedefinitions.json
